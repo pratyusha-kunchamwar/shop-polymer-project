@@ -1,0 +1,171 @@
+.header-main {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0;
+}
+h3 {
+  font-weight: normal;
+  font-size: medium;
+}
+p {
+  color: gray;
+}
+.container {
+  display: flex;
+  margin: 8 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+.account-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  white-space: nowrap;
+  flex-basis: 45%;
+  background-color: 2px solid rgb(54, 50, 50);
+}
+input[type="text"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(158, 144, 144);
+  font-size: medium;
+  margin: 2rem 4rem 2rem 0rem;
+}
+h5 {
+  font-weight: 600;
+}
+h2 {
+  font-weight: 600;
+}
+.state-code {
+  display: flex;
+}
+.account-info p {
+  color: black;
+}
+.account-info select {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: large;
+  margin: 1rem 0;
+  width: 100%;
+}
+.billing {
+  font-weight: bold;
+  font-size: medium;
+}
+.chekbox-data {
+  margin-top: 1rem;
+}
+.chekbox-data label {
+  margin-left: 0.5rem;
+}
+/* payment */
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  width: 50%;
+  margin-top: 5rem;
+}
+.expiry {
+  display: flex;
+  justify-content: space-between;
+}
+.expiry input[type="text"] {
+  margin-bottom: 2rem;
+  width: 33%;
+}
+#month,
+#year {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 33%;
+}
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.summary {
+  margin-bottom: 1rem;
+}
+.product-price-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+.total-cart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  font-size: small;
+}
+.total-cart p {
+  color: black;
+}
+
+/* small */
+@media (min-width: 300px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+  }
+  .account-info {
+    width: 100%;
+  }
+  .payment-method {
+    width: 100%;
+  }
+  .footer {
+    display: none;
+  }
+  .place-order {
+    top: 90%;
+    left: 0%;
+    position: fixed;
+    color: white;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    height: 4rem;
+    background-color: #190572;
+  }
+}
+@media (min-width: 769px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .account-info {
+    max-width: 900px;
+    width: 50%;
+    margin: 0 2rem;
+  }
+  .payment-method {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    width: 50%;
+    margin: 0 2rem;
+  }
+  .place-order {
+    position: relative;
+    height: 2.5rem;
+    width: 10rem;
+    margin-top: 2rem;
+    border: 2px solid black;
+    background-color: #ffff;
+    color: black;
+    top: 10%;
+  }
+  .footer {
+    display: block;
+  }
+}

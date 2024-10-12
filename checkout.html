@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkout</title>
+    <link rel="stylesheet" href="./commonstyle.css" />
+    <link rel="stylesheet" href="./checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header container-header">
+      <nav>
+        <div class="top-container-header">
+          <div class="left-sidebar">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </div>
+          <a href="http://127.0.0.1:5500/home.html"> <h3 class="shop">SHOP</h3></a>
+          <div class="right-sidebar">
+            <i class="fa-solid fa-cart-shopping fa-1g"></i>
+          </div>
+        </div>
+        <ul class="bottom-container-header">
+          <li>
+            <a href="http://127.0.0.1:5500/list/mens-outerwear.html"
+              >Men's Outerwear</a
+            >
+          </li>
+          <li><a href="/list/ladies-outerwear">Ladies Outerwear</a></li>
+          <li><a href="/list/mens-tshirts">Men's T-Shirts</a></li>
+          <li><a href="/list/ladies-tshirts">Ladies T-Shirts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <header class="header-main">
+        <h3>Checkout</h3>
+        <p>Shop is a demo app - form data will not be sent</p>
+      </header>
+
+      <div class="container">
+        <div class="account-info">
+          <h5>Account Information</h5>
+          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Phone Number" />
+
+          <h5>Shipping Address</h5>
+          <input type="text" placeholder="Address" />
+          <input type="text" placeholder="city" />
+          <div class="state-code">
+            <input type="text" placeholder="State/Province" />
+            <input type="text" placeholder="Zip/Postal Code" />
+          </div>
+          <p>country</p>
+          <div class="select">
+            <select>
+              <option value="usa">United States</option>
+              <option value="canada">Canada</option>
+            </select>
+          </div>
+
+          <p class="billing">Billing Address</p>
+          <div class="chekbox-data">
+            <input type="checkbox" id="address" />
+            <label for="address">Use different billing address</label>
+          </div>
+        </div>
+
+        <div class="payment-method">
+          <h5>Payment Method</h5>
+          <input type="text" placeholder="Cardholder Name" />
+          <input type="text" placeholder="Card Number" />
+          <p>Expiry</p>
+          <!-- expiry -->
+          <div class="expiry">
+            <select id="month">
+              <option value="01">Jan</option>
+              <option value="02">Feb</option>
+              <option value="03">Mar</option>
+              <option value="04">Apr</option>
+              <option value="05">May</option>
+              <option value="06">Jun</option>
+              <option value="07">Jul</option>
+              <option value="08">Aug</option>
+              <option value="09">Sep</option>
+              <option value="10">Oct</option>
+              <option value="11">Nov</option>
+              <option value="12">Dec</option>
+            </select>
+            <select id="year">
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2014">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+            <input type="text" placeholder="cvv" />
+          </div>
+          <!-- order -->
+          <div class="order-summary">
+            <h5 class="summary">Order Summary</h5>
+            <div class="product-price-container">
+              <div class="product">Anvil L/S Crew Neck - Grey</div>
+              <div class="price">$66.45</div>
+            </div>
+            <div class="product-price-container">
+              <div class="product">Men's Tech Shell Full-Zip</div>
+              <div class="price">$100.45</div>
+            </div>
+            <div class="product-price-container">
+              <div class="product">Android Nylon Packable Jacket</div>
+              <div class="price">$33.45</div>
+            </div>
+            <!-- total -->
+            <div class="total-cart">
+              <p>Total</p>
+              <div class="price">$201</div>
+            </div>
+            <button class="place-order">PLACE_ORDER</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>Made by Pratyusha</p>
+      <button class="footer-button">DEMO ONLY</button>
+    </footer>
+  </body>
+</html>

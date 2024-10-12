@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="./commonstyle.css" />
+  </head>
+  <body>
+    <header class="header container-header">
+      <nav>
+        <div class="top-container-header">
+          <div class="left-sidebar">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </div>
+          <a href="http://127.0.0.1:5500/home.html"> <h3 class="shop">SHOP</h3></a>
+          <div class="right-sidebar">
+            <i class="fa-solid fa-cart-shopping fa-1g"></i>
+          </div>
+        </div>
+        <ul class="bottom-container-header">
+          <li>
+            <a href="http://127.0.0.1:5500/list/mens-outerwear.html"
+              >Men's Outerwear</a
+            >
+          </li>
+          <li><a href="/list/ladies-outerwear">Ladies Outerwear</a></li>
+          <li><a href="/list/mens-tshirts">Men's T-Shirts</a></li>
+          <li><a href="/list/ladies-tshirts">Ladies T-Shirts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <div class="top-item">
+        <h4>Your Cart</h4>
+        <span>(item-1)</span>
+      </div>
+      <div class="main-frame">
+        <div class="container">
+          <div class="items-left">
+            <img src="https://shop.polymer-project.org/esm-bundled/data/images/10-15068B.jpg" alt="img" />
+          </div>
+          <!-- web -->
+          <div class="web-container">
+            <p class="item-description">Anvil L/S Crew Neck - Grey</p>
+            <div class="select-quantity">
+              <label for="quantity">Qty</label>
+              <select id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div>Size: M</div>
+            <div>&dollar;22.15</div>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <!-- mobile -->
+          <div class="mobile-container">
+            <div class="row1">
+              <p class="item-description">Anvil L/S Crew Neck - Grey</p>
+              <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="row2">
+              <label for="quantity">Qty</label>
+              <select id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <div>Size: M</div>
+              <div>&dollar;22.15</div>
+            </div>
+          </div>
+        </div>
+        <!-- total -->
+        <div class="total">
+          <h4>Total</h4>
+          <h4>$119.35</h4>
+          <a href="http://127.0.0.1:5500/checkout.html"><button class="checkout">CHECKOUT</button></a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Made by Pratyusha</p>
+      <button class="footer-button">DEMO ONLY</button>
+    </footer>
+  </body>
+</html>
