@@ -1,4 +1,4 @@
-.top-item {
+.heading {
   display: flex;
   margin: 2rem 0;
   flex-direction: column;
@@ -9,18 +9,18 @@
   width: 100%;
   height: 100%;
 }
-.container {
+.cart-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-
-
-.items-left img {
+/* for image */
+.image-container img {
   width: 75px;
   height: 75px;
 }
+/* for nof items select */
 .select-quantity {
   display: flex;
 }
@@ -33,15 +33,15 @@
   background-color: transparent;
   width: 100%;
 }
-.total {
+/* total amount */
+.total-amount{
   max-width: 90rem;
   margin-top: 0rem;
   display: flex;
   justify-content: flex-end;
-  gap: 4rem;
-  padding-right: 12rem;
+  margin-left: auto;
 }
-.checkout {
+.checkout-button{
   width: 8rem;
   height: 3rem;
   border: none;
@@ -56,11 +56,11 @@
   .footer {
     display: none;
   }
-  .container {
+  .cart-container {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 5rem;
+    padding: 4rem;
   }
   .mobile-container {
     max-width: 720px;
@@ -75,17 +75,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
   .row2 {
     display: flex;
     gap: 1rem;
     margin-left: auto;
   }
-  .total {
+  .total-amount{
     max-width: 90rem;
-    padding-left: 1rem;
+    gap: 3rem;
   }
-  .checkout {
+  .checkout-button{
     top: 90%;
     left: 0%;
     position: fixed;
@@ -104,7 +105,7 @@
   .mobile-container {
     display: none;
   }
-  .checkout {
+  .checkout-button{
     position: relative;
     width: 8rem;
     height: 3rem;
@@ -113,6 +114,7 @@
     border: 2px solid black;
     background-color: #ffff;
     bottom: 2rem;
+    top: -35%;
   }
   .web-container {
     max-width: 900px;
@@ -127,5 +129,10 @@
   .item-description {
     align-self: flex-start;
     margin-right: auto;
+  }
+  .total-amount {
+    max-width: 90rem;
+    padding-right: 5rem;
+    gap: 3rem;
   }
 }

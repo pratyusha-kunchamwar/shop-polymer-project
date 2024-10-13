@@ -18,7 +18,9 @@
           <div class="left-sidebar">
             <i class="fa-solid fa-bars fa-lg"></i>
           </div>
-          <a href="http://127.0.0.1:5500/home.html"> <h3 class="shop">SHOP</h3></a>
+          <a href="http://127.0.0.1:5500/home.html"
+            ><h3 class="shop">SHOP</h3></a
+          >
           <div class="right-sidebar">
             <i class="fa-solid fa-cart-shopping fa-1g"></i>
           </div>
@@ -36,47 +38,66 @@
       </nav>
     </header>
     <main>
-      <header class="header-main">
+      <header class="heading">
         <h3>Checkout</h3>
         <p>Shop is a demo app - form data will not be sent</p>
       </header>
-
       <div class="container">
+        <!-- account info -->
         <div class="account-info">
           <h5>Account Information</h5>
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Phone Number" />
-
+          <div class="floating-label">
+            <input type="text" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="floating-label">
+            <input type="text" id="phone" required />
+            <label for="phone">Phone Number</label>
+          </div>
           <h5>Shipping Address</h5>
-          <input type="text" placeholder="Address" />
-          <input type="text" placeholder="city" />
+          <div class="floating-label">
+            <input type="text" id="address" required />
+            <label for="address">Address</label>
+          </div>
+          <div class="floating-label">
+            <input type="text" id="city" required />
+            <label for="city">City</label>
+          </div>
           <div class="state-code">
-            <input type="text" placeholder="State/Province" />
-            <input type="text" placeholder="Zip/Postal Code" />
+            <div class="floating-label">
+              <input type="text" id="state" required />
+              <label for="state">State/Province</label>
+            </div>
+            <div class="floating-label">
+              <input type="text" id="zip" required />
+              <label for="zip">Zip/Postal Code</label>
+            </div>
           </div>
-          <p>country</p>
-          <div class="select">
-            <select>
-              <option value="usa">United States</option>
-              <option value="canada">Canada</option>
-            </select>
-          </div>
-
-          <p class="billing">Billing Address</p>
-          <div class="chekbox-data">
+          <p>Country</p>
+          <select id="country" class="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+          </select>
+          <p class="billing-address">Billing Address</p>
+          <div class="chekcbox-data">
             <input type="checkbox" id="address" />
             <label for="address">Use different billing address</label>
           </div>
         </div>
-
+        <!-- payment-method -->
         <div class="payment-method">
           <h5>Payment Method</h5>
-          <input type="text" placeholder="Cardholder Name" />
-          <input type="text" placeholder="Card Number" />
+          <div class="floating-label">
+            <input type="text" id="cardholder-name" required />
+            <label for="cardholder-name">Cardholder Name</label>
+          </div>
+          <div class="floating-label">
+            <input type="text" id="card-number" required />
+            <label for="card-number">Card Number</label>
+          </div>
           <p>Expiry</p>
-          <!-- expiry -->
           <div class="expiry">
-            <select id="month">
+            <select id="month" required>
               <option value="01">Jan</option>
               <option value="02">Feb</option>
               <option value="03">Mar</option>
@@ -90,22 +111,18 @@
               <option value="11">Nov</option>
               <option value="12">Dec</option>
             </select>
-            <select id="year">
-              <option value="2016">2016</option>
-              <option value="2017">2017</option>
-              <option value="2018">2018</option>
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2014">2024</option>
+
+            <select id="year" required>
+              <option value="2024">2024</option>
               <option value="2025">2025</option>
               <option value="2026">2026</option>
             </select>
-            <input type="text" placeholder="cvv" />
+
+            <div class="floating-label">
+              <input type="text" id="cvv" required />
+              <label for="cvv">CVV</label>
+            </div>
           </div>
-          <!-- order -->
           <div class="order-summary">
             <h5 class="summary">Order Summary</h5>
             <div class="product-price-container">
@@ -120,18 +137,16 @@
               <div class="product">Android Nylon Packable Jacket</div>
               <div class="price">$33.45</div>
             </div>
-            <!-- total -->
             <div class="total-cart">
               <p>Total</p>
               <div class="price">$201</div>
             </div>
-            <button class="place-order">PLACE_ORDER</button>
+            <button class="place-order">PLACE ORDER</button>
           </div>
         </div>
       </div>
     </main>
 
-    <!-- footer -->
     <footer class="footer">
       <p>Made by Pratyusha</p>
       <button class="footer-button">DEMO ONLY</button>

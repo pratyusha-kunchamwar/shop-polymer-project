@@ -1,53 +1,72 @@
-.header-main {
+h5 ,h2{
+  font-weight: 600;
+}
+
+/* heading */
+.heading {
   margin-top: 3rem;
   margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0;
 }
-h3 {
+.heading h3 {
   font-weight: normal;
   font-size: medium;
 }
-p {
+.heading p {
   color: gray;
 }
+/* container */
 .container {
   display: flex;
-  margin: 8 auto;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
-  padding-bottom: 4rem;
+  margin: 8 auto;
+  padding: 4rem 6rem;
+  }
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    white-space: nowrap;
+    flex-basis: 45%;
+    background-color: 2px solid rgb(54, 50, 50);
+  }
+/* floating label */
+.floating-label {
+  position: relative;
+  margin: 1rem 0;
 }
-.account-info {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
-  white-space: nowrap;
-  flex-basis: 45%;
-  background-color: 2px solid rgb(54, 50, 50);
-}
-input[type="text"] {
+.floating-label input {
   width: 100%;
+  padding: 0.5rem 0;
   border: none;
+
+  border-bottom: 1px solid rgb(14, 2, 2);
   outline: none;
-  border-bottom: 1px solid rgb(158, 144, 144);
   font-size: medium;
-  margin: 2rem 4rem 2rem 0rem;
 }
-h5 {
-  font-weight: 600;
+.floating-label label {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  margin-bottom: 0.5rem;
+  color: gray;
+  transition: 0.3s ease all;
+  pointer-events: none;
 }
-h2 {
-  font-weight: 600;
+.floating-label input:focus + label,
+.floating-label input:valid + label {
+  top: -0.5rem;
+  font-size: 0.75rem;
+  color: #050914;
 }
 .state-code {
   display: flex;
+  justify-content:space-between;
 }
-.account-info p {
-  color: black;
-}
-.account-info select {
+.country{
   outline: none;
   border: none;
   background-color: transparent;
@@ -55,30 +74,29 @@ h2 {
   margin: 1rem 0;
   width: 100%;
 }
-.billing {
+.billing-address {
   font-weight: bold;
   font-size: medium;
 }
-.chekbox-data {
+.checkbox-data {
   margin-top: 1rem;
 }
-.chekbox-data label {
-  margin-left: 0.5rem;
-}
-/* payment */
+
+/* payment methods */
 .payment-method {
   display: flex;
   flex-direction: column;
   flex-basis: 45%;
   width: 50%;
-  margin-top: 5rem;
 }
+/* expiry */
 .expiry {
   display: flex;
   justify-content: space-between;
 }
 .expiry input[type="text"] {
   margin-bottom: 2rem;
+  display: inline;
   width: 33%;
 }
 #month,
@@ -88,6 +106,7 @@ h2 {
   background-color: transparent;
   width: 33%;
 }
+/* .order-summary */
 .order-summary {
   display: flex;
   flex-direction: column;
@@ -111,6 +130,9 @@ h2 {
   color: black;
 }
 
+
+
+
 /* small */
 @media (min-width: 300px) {
   .container {
@@ -123,6 +145,7 @@ h2 {
   }
   .payment-method {
     width: 100%;
+    margin-top: 5rem;
   }
   .footer {
     display: none;
@@ -136,8 +159,11 @@ h2 {
     margin: 1rem 0 0 0;
     height: 4rem;
     background-color: #190572;
+    cursor: pointer;
   }
 }
+
+/* medium */
 @media (min-width: 769px) {
   .container {
     display: flex;

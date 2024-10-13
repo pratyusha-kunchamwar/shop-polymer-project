@@ -21,13 +21,13 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .div-item {
+  .each-item{
     width: 44%;
     text-align: center;
     margin: 0 3%;
   }
 
-  .div-item img {
+  .each-item img {
     max-width: 100%;
     margin: 2vh 0;
   }
@@ -54,12 +54,12 @@
     flex-wrap: wrap;
   }
 
-  .div-item {
+  .each-item{
     width: 23%;
     text-align: center;
     margin: 0 5%;
   }
-  .div-item img {
+  .each-itemimg {
     margin-top: 2vw;
 
     max-width: 100%;
