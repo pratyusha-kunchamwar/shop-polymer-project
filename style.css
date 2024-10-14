@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-family: "Roboto", "Noto", sans-serif;
+  padding-bottom: 5rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* header */
+header h3 {
+  letter-spacing: 0.3rem;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 0;
+}
+.shop {
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+/* all-data */
+span {
+  color: gray;
+}
+button {
+  transition: background-color 0.4s ease-in;
+}
+button:hover {
+  background-color: black;
+  color: wheat;
+  transform: scale(1.1);
+}
+a {
+  text-decoration: none;
+}
+
+/* footer */
+.footer {
+  bottom: 0;
+  text-align: center;
+  line-height: 2rem;
+}
+.footer-button {
+  border: none;
+  background-color: rgb(58, 52, 52);
+  color: #ffff;
+  padding: 0.7rem 1rem;
+}
+
+/* small */
+@media (min-width: 320px) {
+  .menu {
+    padding-bottom: 1rem;
+  }
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    gap: 2rem;
+    font-size: 0.8rem;
+    z-index: 1000;
+    width: 200px;
+    height: 100vh;
+    background-color: #ffff;
+    list-style: none;
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-top: 5rem;
+  }
+
+  .sidebar-menu li {
+    padding-bottom: 1.5rem;
+  }
+  .sidebar-menu a {
+    text-decoration: none;
+    color: black;
+  }
+  .sidebar-menu a:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+  }
+  .sidebar-toggle:checked ~ .sidebar-menu {
+    transform: translateX(0);
+  }
+  .open-menu {
+    position: relative;
+    cursor: pointer;
+  }
+  .open-menu .fa-bars,
+  .open-menu .fa-x {
+    position: absolute;
+    cursor: pointer;
+  }
+  .open-menu .fa-x {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar-toggle:checked + .open-menu .fa-bars {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar-toggle:checked + .open-menu .fa-x {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (min-width: 769px) {
+  .open-menu {
+    visibility: hidden;
+  }
+  .container {
+    padding-bottom: 3rem;
+  }
+  .menu {
+    height: 7rem;
+  }
+  .sidebar-menu {
+    position: absolute;
+    top: 4%;
+    left: 40%;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    white-space: nowrap;
+    background-color: transparent;
+    margin-top: 0;
+    gap: 2.5rem;
+    transform: none;
+  }
+  .sidebar-menu a {
+    color: black;
+  }
+  .footer {
+    position: absolute;
+    margin: 0 auto;
+    top: 100%;
+    left: 50%;
+    bottom: 0%;
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 0.4rem;
+  }
+}
