@@ -1,6 +1,10 @@
 #active{
   border-bottom: 2px solid black;
 }
+
+ul li{
+  text-decoration: none;
+}
 /* heading */
 .heading {
   text-align: center;

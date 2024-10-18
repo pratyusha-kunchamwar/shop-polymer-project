@@ -11,7 +11,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+.bottom-container-header {
+  display: flex;
+  justify-content: center;
+  gap: 0 2rem;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  list-style: none; /* This removes the bullet points */
+}
 
 /* mobile-menu */
 .mobile-menu {
@@ -73,14 +80,6 @@ header h3 {
 .bottom-container-header {
   display: none;
 }
-a {
-  text-decoration: none;
-}
-a.hover {
-  pointer-events: none;
-  color: gray; /* Optional: Make it look disabled */
-  cursor: default; /* Optional: Show a default (non-clickable) cursor */
-}
 .right-sidebar a {
   color: black;
 }
@@ -88,38 +87,10 @@ a.hover {
 .bottom-container-header a {
   color: inherit;
   color: black;
-}
-/* .bottom-container-header a
- {
   text-decoration: none;
 }
-
-.bottom-container-header a:active
- {
-  text-decoration: underline;
-  transform: 0.5 ses;
-} */
-.bottom-container-header a {
-  position: relative;
-  color: black;
+a{
   text-decoration: none;
-}
-
-.bottom-container-header a::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  transition: width 0.3s ease-in-out;
-}
-
-.bottom-container-header a.active::after {
-  width: 100%;
-  transition-delay: 0.9s;
-  border-bottom:2px solid black ;
 }
 
 .shop {
@@ -141,7 +112,6 @@ a.hover {
 .footer-button:hover {
   background-color: rgb(58, 52, 52);
 }
-
 
 /* alldata */
 span {
