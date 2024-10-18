@@ -1,3 +1,7 @@
+#active{
+  border-bottom: 2px solid black;
+}
+/* heading */
 .heading {
   text-align: center;
   line-height: 2rem;
@@ -7,6 +11,7 @@
 .item-name {
   margin-top: 0.5vw;
   font-size: 0.78rem;
+  font-weight: bold;
 }
 
 @media (min-width: 300px) {
@@ -21,7 +26,7 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .each-item{
+  .each-item {
     width: 44%;
     text-align: center;
     margin: 0 3%;
@@ -46,7 +51,7 @@
     object-fit: cover;
     object-position: center;
   }
-.container-items {
+  .container-items {
     max-width: 90rem;
     width: 100%;
     display: flex;
@@ -54,7 +59,7 @@
     flex-wrap: wrap;
   }
 
-  .each-item{
+  .each-item {
     width: 23%;
     text-align: center;
     margin: 0 5%;

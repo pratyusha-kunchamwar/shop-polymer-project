@@ -18,29 +18,29 @@
           <div class="left-sidebar">
             <i class="fa-solid fa-bars fa-lg"></i>
           </div>
-          <a href="http://127.0.0.1:5500/home.html"
-            ><h3 class="shop">SHOP</h3></a
-          >
+          <a href="index.html"> <h3 class="shop">SHOP</h3></a>
           <div class="right-sidebar">
-            <i class="fa-solid fa-cart-shopping fa-1g"></i>
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping fa-1g"></i
+            ></a>
           </div>
         </div>
-        <ul class="bottom-container-header">
-          <li>
-            <a href="http://127.0.0.1:5500/list/mens-outerwear.html"
-              >Men's Outerwear</a
-            >
-          </li>
-          <li><a href="/list/ladies-outerwear">Ladies Outerwear</a></li>
-          <li><a href="/list/mens-tshirts">Men's T-Shirts</a></li>
-          <li><a href="/list/ladies-tshirts">Ladies T-Shirts</a></li>
-        </ul>
+
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="mens-outerwear.html">Men's Outerwear</a></li>
+            <li><a href="mens-outerwear.html">Ladies Outerwear</a></li>
+            <li><a href="mens-outerwear.html">Men's T-Shirt</a></li>
+            <li><a href="mens-outerwear.html">Ladies T-Shirt</a></li>
+          </ul>
+        </div>
+        <div class="shadow"></div>
       </nav>
     </header>
     <main>
       <header class="heading">
         <h3>Checkout</h3>
-        <p>Shop is a demo app - form data will not be sent</p>
+        <p id="description">Shop is a demo app - form data will not be sent</p>
       </header>
       <div class="container">
         <!-- account info -->
@@ -120,7 +120,7 @@
 
             <div class="floating-label">
               <input type="text" id="cvv" required />
-              <label for="cvv">CVV</label>
+              <label for="cvv" id="cvv">CVV</label>
             </div>
           </div>
           <div class="order-summary">
@@ -151,5 +151,25 @@
       <p>Made by Pratyusha</p>
       <button class="footer-button">DEMO ONLY</button>
     </footer>
+    <script>
+      const hamBurgerButton = document.querySelector(".fa-lg");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const shadow = document.querySelector(".shadow");
+
+      hamBurgerButton.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+        shadow.classList.add("active");
+      });
+
+      shadow.addEventListener("click", function (event) {
+        if (
+          !hamBurgerButton.contains(event.target) &&
+          !mobileMenu.contains(event.target)
+        ) {
+          mobileMenu.classList.remove("active");
+          shadow.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>

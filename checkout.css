@@ -1,4 +1,5 @@
-h5 ,h2{
+h5,
+h2 {
   font-weight: 600;
 }
 
@@ -15,6 +16,7 @@ h5 ,h2{
 }
 .heading p {
   color: gray;
+  font-size: small;
 }
 /* container */
 .container {
@@ -23,16 +25,16 @@ h5 ,h2{
   justify-content: space-between;
   margin: 8 auto;
   padding: 4rem 6rem;
-  }
-  .account-info {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    white-space: nowrap;
-    flex-basis: 45%;
-    background-color: 2px solid rgb(54, 50, 50);
-  }
+}
+.account-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  white-space: nowrap;
+  flex-basis: 45%;
+  background-color: 2px solid rgb(54, 50, 50);
+}
 /* floating label */
 .floating-label {
   position: relative;
@@ -43,7 +45,7 @@ h5 ,h2{
   padding: 0.5rem 0;
   border: none;
 
-  border-bottom: 1px solid rgb(14, 2, 2);
+  border-bottom: 1px solid rgb(190, 172, 172);
   outline: none;
   font-size: medium;
 }
@@ -64,9 +66,9 @@ h5 ,h2{
 }
 .state-code {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
-.country{
+.country {
   outline: none;
   border: none;
   background-color: transparent;
@@ -129,9 +131,9 @@ h5 ,h2{
 .total-cart p {
   color: black;
 }
-
-
-
+#cvv {
+  margin-bottom: 1px;
+}
 
 /* small */
 @media (min-width: 300px) {
@@ -160,6 +162,9 @@ h5 ,h2{
     height: 4rem;
     background-color: #190572;
     cursor: pointer;
+  }
+  .place-order:hover {
+    background-color: #190572;
   }
 }
 
@@ -190,6 +195,10 @@ h5 ,h2{
     background-color: #ffff;
     color: black;
     top: 10%;
+  }
+  .place-order:hover {
+    color: #ffff;
+    background-color: black;
   }
   .footer {
     display: block;

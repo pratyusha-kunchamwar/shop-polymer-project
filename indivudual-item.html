@@ -18,17 +18,26 @@
           <div class="left-sidebar">
             <i class="fa-solid fa-bars fa-lg"></i>
           </div>
-          <a href="http://127.0.0.1:5500/home.html"> <h3 class="shop">SHOP</h3></a>
+          <a href="index.html"> <h3 class="shop">SHOP</h3></a>
           <div class="right-sidebar">
-            <i class="fa-solid fa-cart-shopping fa-1g"></i>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-1g"></i></a>
           </div>
         </div>
         <ul class="bottom-container-header">
-          <li><a href="/list/mens-outerwear">Men's Outerwear</a></li>
-          <li><a href="/list/ladies-outerwear">Ladies Outerwear</a></li>
-          <li><a href="/list/mens-tshirts">Men's T-Shirts</a></li>
-          <li><a href="/list/ladies-tshirts">Ladies T-Shirts</a></li>
+          <li><a href="mens-outerwear.html">Men's Outerwear</a></li>
+          <li><a href="ladies-outwear.html">Ladies Outerwear</a></li>
+          <li><a href="means-tshirts.html">Men's T-Shirts</a></li>
+          <li><a href="ladies-tshirt.html">Ladies T-Shirts</a></li>
         </ul>
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="mens-outerwear.html">Men's Outerwear</a></li>
+            <li><a href="mens-outerwear.html">Ladies Outerwear</a></li>
+            <li><a href="mens-outerwear.html">Men's T-Shirt</a></li>
+            <li><a href="mens-outerwear.html">Ladies T-Shirt</a></li>
+          </ul>
+        </div>
+        <div class="shadow"></div>
       </nav>
     </header>
 
@@ -104,4 +113,24 @@
       <button class="footer-button">DEMO ONLY</button>
     </footer>
   </body>
+  <script>
+    const hamBurgerButton = document.querySelector(".fa-lg");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const shadow = document.querySelector(".shadow");
+
+    hamBurgerButton.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+      shadow.classList.add("active");
+    });
+
+    shadow.addEventListener("click", function (event) {
+      if (
+        !hamBurgerButton.contains(event.target) &&
+        !mobileMenu.contains(event.target)
+      ) {
+        mobileMenu.classList.remove("active");
+        shadow.classList.remove("active");
+      }
+    });
+  </script>
 </html>

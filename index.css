@@ -1,3 +1,23 @@
+/* Add this to your CSS */
+.nav-link {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #000; /* Customize border style */
+}
+
+/* Add this to your CSS */
+.nav-link {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #000; /* Customize border style */
+}
+
 /* cards */
 .card-item {
   text-align: center;
@@ -9,6 +29,7 @@
   margin: 1rem;
   font-weight: normal;
   font-size: medium;
+
 }
 .images {
   object-fit: cover;
@@ -17,9 +38,11 @@
   border: none;
   cursor: pointer;
   background-color: #ffff;
-  border: 1px solid black;
+  border: 2px solid black;
   height: 2.5rem;
-  width: 12rem;
+  width: 140rem;
+  
+
 }
 .sub-container {
   display: flex;
@@ -43,7 +66,11 @@
     height: 240px;
   }
   .shop-button {
-    width: 8rem;
+    width: 10rem;
+    margin-top: 1rem;
+  }
+  .container{
+    margin-top: 20px;
   }
 }
 /* medium */

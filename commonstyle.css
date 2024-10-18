@@ -11,6 +11,51 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* mobile-menu */
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  gap: 2rem;
+  top: 0;
+  left: -600px;
+  width: 250px;
+  padding: 30px 0;
+  height: 100%;
+  z-index: 100000;
+  background-color: #fff;
+
+  transition: left 0.3s ease-in-out;
+}
+.shadow {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.shadow.active {
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.4s ease;
+}
+.mobile-menu.active {
+  left: 0;
+}
+.mobile-menu ul li {
+  margin-top: 2rem;
+}
+.mobile-menu ul li a {
+  color: rgb(97, 92, 92);
+  font-size: small;
+  margin-left: 2rem;
+}
+
 /* header */
 header h3 {
   letter-spacing: 0.3rem;
@@ -31,17 +76,55 @@ header h3 {
 a {
   text-decoration: none;
 }
+a.hover {
+  pointer-events: none;
+  color: gray; /* Optional: Make it look disabled */
+  cursor: default; /* Optional: Show a default (non-clickable) cursor */
+}
+.right-sidebar a {
+  color: black;
+}
+
 .bottom-container-header a {
   color: inherit;
   color: black;
 }
-.bottom-container-header a:hover,
-.bottom-container-header a:focus {
+/* .bottom-container-header a
+ {
+  text-decoration: none;
+}
+
+.bottom-container-header a:active
+ {
   text-decoration: underline;
+  transform: 0.5 ses;
+} */
+.bottom-container-header a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.bottom-container-header a::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+
+.bottom-container-header a.active::after {
+  width: 100%;
+  transition-delay: 0.9s;
+  border-bottom:2px solid black ;
 }
 
 .shop {
   color: black;
+  font-size: medium;
 }
 /* footer */
 .footer {
@@ -55,6 +138,10 @@ a {
   color: #ffff;
   padding: 0.7rem 1rem;
 }
+.footer-button:hover {
+  background-color: rgb(58, 52, 52);
+}
+
 
 /* alldata */
 span {
@@ -65,8 +152,6 @@ button:hover {
   background-color: black;
   color: wheat;
 }
-
-
 
 /* header bottom */
 @media (min-width: 768px) {
